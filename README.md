@@ -2,45 +2,110 @@
 
 A full-stack analytics dashboard for managing and visualizing admission-related student data.
 
-## Features
+---
+
+# Features
 
 - Admission analytics dashboard
-- Readmitted students tracking
-- Interactive charts and visualizations
-- FastAPI backend
-- React frontend
+- Semester-wise readmitted student tracking
+- Interactive charts and graphs
+- FastAPI backend APIs
+- React + Vite frontend
 - SQLite database integration
-- REST API support
 
 ---
 
-## Tech Stack
+# Tech Stack
 
-### Backend
+## Backend
 - FastAPI
 - SQLAlchemy
 - SQLite
 - Uvicorn
 
-### Frontend
+## Frontend
 - React
 - Vite
+- Tailwind CSS
 - Recharts
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```bash
 Admission2/
 │
 ├── backend/
 │   ├── app/
-│   ├── venv/
-│   └── requirements.txt
+│   ├── requirements.txt
+│   └── dashboard.db
 │
 ├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.ts
 │
-├── dashboard.db
-├── README.md
-└── .gitignore
+├── .gitignore
+└── README.md
+```
+
+---
+
+# Backend Setup
+
+```bash
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+Backend URL:
+
+```bash
+http://127.0.0.1:8000
+```
+
+Swagger Docs:
+
+```bash
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+# API Endpoint Example
+
+```http
+GET /api/admission/readmitted-students
+```
+
+---
+
+# Dashboard Preview
+
+- Admission Overview
+- Semester-wise analytics
+- Real-time chart visualization
+
+---
+
+
